@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Football_Stats.Library.Models.Match>
+
+<div class="col-md-8 shadow-sm">
+    @if (Model.Any() || Model == null)
+    {
+        <table class="table table-hover" id="myTable">
+            <thead>
+                <tr>
+                    <th>Home Team</th>
+                    <th>Score</th>
+                    <th>Away Team</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var match in Model)
+                {
+                    <tr>
+                        <td>@match.homeTeam.name</td>
+                        <td>@match.score.fullTime.homeTeam - @match.score.fullTime.awayTeam</td>
+                        <td>@match.awayTeam.name</td>
+                        <td>@match.utcDate.</td>
+                        <td>@match.status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <hr />
+        <h2 class="text-center mt-4 mb-4">There is no data atm! Check the third party api for data.</h2>
+    }
+</div>

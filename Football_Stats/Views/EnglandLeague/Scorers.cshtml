@@ -1,0 +1,20 @@
+﻿@model Football_Stats.Library.Models.Scorers
+
+@{
+    ViewBag.Title = "Scorers";
+}
+
+<h2 class="text-center text-primary">Premier League</h2>
+
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            @Html.Partial("~/Views/Shared/PartialViews/_ScorersMenuView.cshtml")
+        </div>
+        <div class="col-md-8 shadow-sm">
+            <h4 class="text-center text-primary mt-3 mb-3">Top Goal @ViewBag.Title</h4>
+            @Html.Partial("~/Views/Shared/PartialViews/_ScorersView.cshtml", Model)
+        </div>
+    </div>
+</div>

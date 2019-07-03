@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Football_Stats.Library.Models.Standing>
+@{
+    ViewBag.Title = "Serie A";
+}
+
+<h2 class="mt-3 text-center">@ViewBag.Title</h2>
+<hr />
+<div class="container">
+    <div class="row">
+        @Html.Partial("~/Views/Shared/PartialViews/_MenuView.cshtml")
+        @Html.Partial("~/Views/Shared/PartialViews/_StandingsView.cshtml")
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            $('#myTable').fadeOut();
+        });
+        $("#btnShow").click(function () {
+            $("#myTable").fadeToggle();
+
+        })
+    })
+</script>

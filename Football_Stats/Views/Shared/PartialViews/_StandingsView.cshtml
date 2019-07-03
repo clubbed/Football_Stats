@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Football_Stats.Library.Models.Standing>
+
+<div class="col-md-8 shadow-lg table-responsive">
+    @if (Model.Any())
+    {
+        <table class="table table-hover" id="myTable">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Club</th>
+                    <th>Games</th>
+                    <th>Won</th>
+                    <th>Draw</th>
+                    <th>Lost</th>
+                    <th>GD</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var standing in Model)
+                {
+                    foreach (var club in standing.table)
+                    {
+                    <tr>
+                        <td>@club.position</td>
+                        <td>@club.team.name</td>
+                        <td>@club.playedGames</td>
+                        <td>@club.won</td>
+                        <td>@club.draw</td>
+                        <td>@club.lost</td>
+                        <td>@club.goalDifference</td>
+                        <td>@club.points</td>
+                    </tr>
+                    }
+
+                }
+            </tbody>
+        </table>
+    }
+    else
+    { 
+        <hr />
+        <h2 class="text-center mt-4 mb-4">There is no data atm! Check the third party api for data.</h2>
+    }
+</div>

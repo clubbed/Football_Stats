@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Football_Stats.Library.Models.Standing>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4 text-center">Football Stats</h1>
+    <p class="lead text-center text-dark">On our site you will find latest news about football.</p>
+</div>
+
+<hr />
+
+<h2 class="text-primary text-center mt-3 mb-3">Leagues</h2>
+
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://www.insidesport.co/wp-content/uploads/2019/04/The-reason-why-Premier-League-clubs-profit-has-declined.jpg" alt="premierleague"></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="@Url.Action("Index","EnglandLeague")">Premier League</a>
+                </h4>
+                <p class="card-text">The Premier League is the top level of the English football league system. 
+                Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://i0.wp.com/www.broadbandtvnews.com/wp-content/uploads/2018/08/LaLiga.jpg" alt="laliga"></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="@Url.Action("Index","SpainLeague")">La Liga</a>
+                </h4>
+                <p class="card-text">
+                    The Campeonato Nacional de Liga de Primera División, commonly known as La Liga, 
+                    is the men's top professional football division of the Spanish football league system.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://s3-ap-southeast-1.amazonaws.com/rooter-wordpress-media/wp-content/uploads/2018/04/14211305/serie-a.jpg" alt="seriea"></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="@Url.Action("Index","ItalyLeague")">Serie A</a>
+                </h4>
+                <p class="card-text">
+                    Serie A, also called Serie A TIM due to sponsorship by TIM, 
+                    is a professional league competition for football clubs located at the top of the 
+                    Italian football league system and the winner is awarded the Coppa Campioni d'Italia.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://eventic365.eu/wp-content/uploads/2018/09/Bundesliga-logo-2017-2018.jpg" alt="bundesliga"></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="@Url.Action("Index","GermanLeague")">Bundesliga</a>
+                </h4>
+                <p class="card-text">
+                    The Bundesliga is a professional association football league in Germany and the football league with the highest average stadium 
+                    attendance worldwide. At the top of the German football league system, the Bundesliga is Germany's primary football competition.
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>

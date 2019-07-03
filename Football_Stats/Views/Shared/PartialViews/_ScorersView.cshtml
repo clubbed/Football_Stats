@@ -1,0 +1,38 @@
+﻿@model Football_Stats.Library.Models.Scorers
+
+@if (Model.scorers.Any())
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Num of Goals</th>
+                <th>Player</th>
+                <th>Team</th>
+                <th>Position</th>
+                <th>Nationality</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var scorer in Model.scorers)
+            {
+                <tr id=@scorer.player.id>
+                    <td>@scorer.numberOfGoals</td>
+
+                    <td>@scorer.player.name</td>
+
+                    <td>@scorer.team.name</td>
+
+                    <td>@scorer.player.position</td>
+
+                    <td>@scorer.player.nationality</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <hr />
+    <h2 class="text-center mt-4 mb-4">There is no data atm! Check the third party api for data.</h2>
+}

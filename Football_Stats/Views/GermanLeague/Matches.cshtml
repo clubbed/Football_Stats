@@ -1,0 +1,20 @@
+﻿@model IPagedList<Football_Stats.Library.Models.Match>
+@using PagedList;
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Matches";
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+<h2 class="text-center text-primary">@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="row">
+        @Html.Partial("~/Views/Shared/PartialViews/_MatchesMenuView.cshtml")
+        @Html.Partial("~/Views/Shared/PartialViews/_MatchesView.cshtml", Model)
+    </div>
+    <div class="row">
+        <div class="col-md-5"></div>
+        @Html.PagedListPager(Model, page => Url.Action("Matches", new { page }))
+    </div>
+</div>

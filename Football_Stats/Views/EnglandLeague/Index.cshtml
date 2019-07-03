@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Football_Stats.Library.Models.Standing>
+@{
+    ViewBag.Title = "Premier League";
+}
+
+<h2 class="text-center text-primary">@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <div class="row">
+        @Html.Partial("~/Views/Shared/PartialViews/_MenuView.cshtml")
+        @Html.Partial("~/Views/Shared/PartialViews/_StandingsView.cshtml",Model)
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js">
+    $(document).ready(function () {
+
+    })
+
+</script>
